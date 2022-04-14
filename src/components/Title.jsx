@@ -45,9 +45,9 @@ const ColumnRight = styled.div`
   align-item: flex-start;
 `;
 const Images = styled(motion.img)`
-  height: 50%;
+  height: 60%;
   width: auto;
-  padding: 10px;
+  margin-right: 2em;
 `;
 function Title() {
   const fadeFromBottom = {
@@ -60,7 +60,7 @@ function Title() {
   };
   return (
     <Section>
-      <Container>
+      <Container className="frontPageContainer">
         <ColumnLeft>
           <motion.h1
             variants={fadeFromLeft}
@@ -74,12 +74,13 @@ function Title() {
         </ColumnLeft>
         <ColumnRight>
           <Images
+            id="frontPageImg"
             src={img}
             alt="none"
             variants={fadeFromBottom}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 1.2 }}
+            transition={{ duration: 1.5 }}
           />
         </ColumnRight>
       </Container>
