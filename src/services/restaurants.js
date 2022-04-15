@@ -1,5 +1,6 @@
 import api from "./apiConfig";
 
+
 export const getRestaurants = async () => {
   try {
     const response = await api.get("/restaurants");
@@ -18,7 +19,10 @@ export const getRestaurant = async (id) => {
   }
 };
 
-export const createRestaurant = async (restaurant) => {
+
+
+export const createRestaurant = async restaurant => {
+
   try {
     const response = await api.post("/restaurants", restaurant);
     return response.data;
@@ -26,6 +30,7 @@ export const createRestaurant = async (restaurant) => {
     throw error;
   }
 };
+
 
 export const updateRestaurant = async (id, restaurant) => {
   try {
@@ -44,3 +49,4 @@ export const deleteRestaurant = async (id) => {
     throw error;
   }
 };
+
