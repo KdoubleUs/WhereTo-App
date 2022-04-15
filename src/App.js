@@ -20,7 +20,7 @@ function App() {
         <Route path="/spots/create" element={<RestaurantCreate />} />
         <Route path="/bars" element={<Bars />} />
         <Route path="/bars/:id" element={<BarDetail />} />
-        <Route path="/bars/create" element={<BarCreate />} />
+        <Route path="/bars/add-bar" element={<BarCreate />} />
         <Route path="/bars/:id/edit" element={<BarEdit />} />
       </Routes>
     </div>
