@@ -1,37 +1,37 @@
 import { useState, useEffect } from 'react'
-import { deleteActivitiy, getActivitiy } from '../services/activities';
+import { deleteActivity, getActivity } from '../services/activities';
 import { Link, useParams, useNavigate } from "react-router-dom";
 
-export default function activitiyDetail() {
-  const [activitiy, setActivitiy] = useState({})
+export default function ActivityDetail() {
+  const [activity, setActivity] = useState({})
   let { id } = useParams()
   let navigate = useNavigate()
 
   useEffect(() => {
-    const fetchActivitiy = async () => {
-      let oneactivitiy = await getActivitiy(id)
-      setActivitiy(oneactivitiy)
+    const fetchActivity = async () => {
+      let oneactivity = await getActivity(id)
+      setActivity(oneactivity)
     }
 
-    fetchActivitiy()
+    fetchActivity()
   }, [id])
 
   return (
     <div>
-      <h2>{activitiy.image}</h2>
-      <p>{activitiy.name}</p>
-      <p>{activitiy.category}</p>
-      <p>{activitiy.description}</p>
-      <p>{activitiy.address}</p>
-      <p>{activitiy.phone}</p>
+      <h2>{activity.image}</h2>
+      <p>{activity.name}</p>
+      <p>{activity.category}</p>
+      <p>{activity.description}</p>
+      <p>{activity.address}</p>
+      <p>{activity.phone}</p>
       <div>
         <button>
-          <Link to={`/activities/${activitiy._id}/edit`}>Edit activitiy</Link>
+          <Link to={`/activities/${activity._id}/edit`}>Edit activity</Link>
         </button>
         <button onClick={() => {
-          deleteActivitiy(activitiy._id)
+          deleteActivity(activity._id)
           navigate("/activities", { replace: true })
-        }}>Delete activitiy</button>
+        }}>Delete activity</button>
       </div>
     </div>
   )
