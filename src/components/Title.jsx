@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import img from "../images/wine-and-food-1.jpeg";
+import React from 'react';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import img from '../images/wine-and-food-1.jpeg';
 const Section = styled.section`
   height: 100vh;
   display: flex;
@@ -69,7 +69,7 @@ function Title() {
             transition={{ duration: 1.2 }}
           >
             <h1>Restaurant Blog</h1>
-            <p>Here are some of New York Top rated restaurant</p>
+            <p>Here are some of New York's top rated restaurants</p>
           </motion.h1>
         </ColumnLeft>
         <ColumnRight>
