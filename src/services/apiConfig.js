@@ -1,4 +1,5 @@
 import axios from "axios";
+
 let apiUrl;
 const mongoDBCloudUrl =
   "https://restaurant-backend-appication.herokuapp.com/api";
@@ -7,6 +8,7 @@ const apiUrls = {
   production: mongoDBCloudUrl,
   development: local,
 };
+
 if (window.location.hostname === "localhost") {
   apiUrl = apiUrls.development;
 } else {
