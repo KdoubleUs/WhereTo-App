@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { updateActivitiy, getActivitiy } from '../services/activities';
+import { updateActivity, getActivity } from '../services/activities';
 
-export default function activitiyEdit() {
+export default function ActivityEdit() {
   const [activity, setActivity] = useState({
     image: "",
     name: "",
@@ -16,25 +16,25 @@ export default function activitiyEdit() {
   const { id } = useParams()
   
   useEffect(() => {
-    const fetchActivitiy = async () => {
-      let activitiy = await getActivitiy(id)
-      setActivity(activitiy)
+    const fetchActivity = async () => {
+      let activity = await getActivity(id)
+      setActivity(activity)
     }
 
-    fetchActivitiy()
+    fetchActivity()
   }, [id])
 
   const handleChange = (event) => {
     const { name, value } = event.target
     setActivity({
-      ...activitiy,
+      ...activity,
       [name]: value,
     })
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await updateActivitiy(id, activitiy)
+    await updateActivity(id, activity)
     navigate("/activities", { replace: true })
   }
 
