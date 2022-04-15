@@ -3,7 +3,7 @@ import { getActivities } from '../services/activities.js';
 import activities from '../components/activity.jsx';
 
 
-export default function activities() {
+export default function Activities() {
   const [activities, setActivities] = useState([])
   
   useEffect(() => {
