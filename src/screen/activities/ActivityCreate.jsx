@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createActivity } from "../../services/activities";
 
-export default function activityCreate() {
+export default function ActivityCreate() {
   const [activity, setActivity] = useState({
     image: "",
     name: "",
