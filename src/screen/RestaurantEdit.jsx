@@ -1,36 +1,45 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { createRestaurant } from "../services/restaurants";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { updateRestaurant, getRestaurant } from "../services/characters";
+import { getRestaurant } from "../services/restaurants";
 
-export default function RestaurantCreate() {
-  const [restaurant, setRestaurant] = useState({
-    image: "",
+function RestaurantEdit() {
+  const [restaurant, setRestaurants] = useState({
     name: "",
     category: "",
-    description: "",
     address: "",
+    description: "",
     phone: "",
   });
-
   let navigate = useNavigate();
+  const { id } = useParams();
+
+  useEffect(() => {
+    const fetchRestaurant = async () => {
+      const getRestaurant = await getRestaurant(id);
+      setRestaurants(getRestaurant);
+    };
+    fetchRestaurant();
+  }, [id]);
 
   const handleChange = event => {
     const { name, value } = event.target;
-    setRestaurant({
+    setRestaurants({
       ...restaurant,
       [name]: value,
     });
-    console.log(event.target.value);
   };
-  const handleSubmit = async event => {
-    event.preventDefault();
-    await createRestaurant(restaurant);
-    navigate("/restaurants", { replace: true });
-  };
+  const handleSubmit = event => { 
+      event.preventDefault(); 
+      await updateRestaurant(id, restaurant)
+
+
+  }
+
   return (
-    <div className="restaurantSubmitContainer">
+    <div className="restaurantEditContainer">
       <h1>Submit Your Favorite Location</h1>
-      <form onSubmit={handleSubmit} className="restaurantSubmission">
+      <form onSubmit={handleSubmit} className="restaurantEdit">
         <label>Restaurant</label>
         <input
           placeholder="restaurant name"
@@ -75,5 +84,8 @@ export default function RestaurantCreate() {
         </button>
       </form>
     </div>
-  );
+
+  )
 }
+
+export default RestaurantEdit;
