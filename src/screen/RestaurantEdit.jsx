@@ -1,40 +1,40 @@
-import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { updateRestaurant, getRestaurant } from "../services/characters";
-import { getRestaurant } from "../services/restaurants";
+import { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { updateRestaurant, getRestaurant } from '../services/restaurants';
+// import { getRestaurant } from "../services/restaurants";
 
 function RestaurantEdit() {
   const [restaurant, setRestaurants] = useState({
-    name: "",
-    category: "",
-    address: "",
-    description: "",
-    phone: "",
+    image: '',
+    name: '',
+    category: '',
+    address: '',
+    description: '',
+    phone: '',
   });
   let navigate = useNavigate();
   const { id } = useParams();
 
   useEffect(() => {
     const fetchRestaurant = async () => {
-      const getRestaurant = await getRestaurant(id);
-      setRestaurants(getRestaurant);
+      const singleRestaurant = await getRestaurant(id);
+      setRestaurants(singleRestaurant);
     };
     fetchRestaurant();
   }, [id]);
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const { name, value } = event.target;
     setRestaurants({
       ...restaurant,
       [name]: value,
     });
   };
-  const handleSubmit = event => { 
-      event.preventDefault(); 
-      await updateRestaurant(id, restaurant)
-
-
-  }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    await updateRestaurant(id, restaurant);
+    navigate('/restaurants', { replace: true });
+  };
 
   return (
     <div className="restaurantEditContainer">
@@ -84,8 +84,7 @@ function RestaurantEdit() {
         </button>
       </form>
     </div>
-
-  )
+  );
 }
 
 export default RestaurantEdit;

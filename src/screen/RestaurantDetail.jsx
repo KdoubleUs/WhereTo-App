@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { deleteRestaurant, getRestaurant } from "../services/restaurants";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { deleteRestaurant, getRestaurant } from '../services/restaurants';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 
 function RestaurantDetail() {
   const [restaurant, setRestaurant] = useState({});
@@ -9,8 +9,8 @@ function RestaurantDetail() {
 
   useEffect(() => {
     const fetchRestaurant = async () => {
-      const getRestaurant = await getRestaurant(id);
-      setRestaurant(getRestaurant);
+      const singleRestaurant = await getRestaurant(id);
+      setRestaurant(singleRestaurant);
     };
     fetchRestaurant();
   }, [id]);
