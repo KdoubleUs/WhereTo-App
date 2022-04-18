@@ -20,7 +20,6 @@ export default function ActivityCreate() {
       ...activity,
       [name]: value,
     });
-    
   };
   const handleSubmit = async event => {
     event.preventDefault();
@@ -30,7 +29,7 @@ export default function ActivityCreate() {
   return (
     <div>
       <h1>Submit Your Favorite Location</h1>
-      <form onSubmit={handleSubmit} >
+      <form onSubmit={handleSubmit}>
         <label>activity</label>
         <input
           placeholder="activity name"
@@ -63,9 +62,7 @@ export default function ActivityCreate() {
           value={activity.phone}
           onChange={handleChange}
         ></input>
-        <button type="submit">
-          Submit Form
-        </button>
+        <button type="submit">Submit Form</button>
       </form>
     </div>
   );
