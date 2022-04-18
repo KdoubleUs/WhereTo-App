@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { getBars } from '../services/bars.js';
-import Bar from '../components/Bar.jsx';
+import { useState, useEffect } from "react";
+import { getBars } from "../../services/bars.js";
+import Bar from "../../components/Bar.jsx";
 
 export default function Bars() {
   const [bars, setBars] = useState([]);
@@ -16,7 +16,7 @@ export default function Bars() {
   return (
     <div>
       <h1>Bars</h1>
-      {bars.map((barData) => (
+      {bars.map(barData => (
         <Bar bar={barData} />
       ))}
     </div>

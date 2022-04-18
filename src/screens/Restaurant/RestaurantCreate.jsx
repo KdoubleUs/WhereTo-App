@@ -1,45 +1,36 @@
-import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { updateRestaurant, getRestaurant } from "../services/characters";
-import { getRestaurant } from "../services/restaurants";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { createRestaurant } from "../../services/restaurants";
 
-function RestaurantEdit() {
-  const [restaurant, setRestaurants] = useState({
+export default function RestaurantCreate() {
+  const [restaurant, setRestaurant] = useState({
+    image: "",
     name: "",
     category: "",
-    address: "",
     description: "",
+    address: "",
     phone: "",
   });
-  let navigate = useNavigate();
-  const { id } = useParams();
 
-  useEffect(() => {
-    const fetchRestaurant = async () => {
-      const getRestaurant = await getRestaurant(id);
-      setRestaurants(getRestaurant);
-    };
-    fetchRestaurant();
-  }, [id]);
+  let navigate = useNavigate();
 
   const handleChange = event => {
     const { name, value } = event.target;
-    setRestaurants({
+    setRestaurant({
       ...restaurant,
       [name]: value,
     });
+    console.log(event.target.value);
   };
-  const handleSubmit = event => { 
-      event.preventDefault(); 
-      await updateRestaurant(id, restaurant)
-
-
-  }
-
+  const handleSubmit = async event => {
+    event.preventDefault();
+    await createRestaurant(restaurant);
+    navigate("/restaurants", { replace: true });
+  };
   return (
-    <div className="restaurantEditContainer">
+    <div className="restaurantSubmitContainer">
       <h1>Submit Your Favorite Location</h1>
-      <form onSubmit={handleSubmit} className="restaurantEdit">
+      <form onSubmit={handleSubmit} className="restaurantSubmission">
         <label>Restaurant</label>
         <input
           placeholder="restaurant name"
@@ -84,8 +75,5 @@ function RestaurantEdit() {
         </button>
       </form>
     </div>
-
-  )
+  );
 }
-
-export default RestaurantEdit;
