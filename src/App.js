@@ -14,6 +14,11 @@ import Restaurants from "./screens/Restaurant/Restaurants";
 import RestaurantDetail from "./screens/Restaurant/RestaurantDetail";
 import RestaurantEdit from "./screens/Restaurant/RestaurantEdit";
 import About from "./components/About";
+import Activities from "./screens/Activities/Activities";
+import ActivityCreate from "./screens/Activities/ActivityCreate";
+import ActivityDetail from "./screens/Activities/ActivityDetail";
+import ActivityEdit from "./screens/Activities/ActivityEdit";
+
 // import Activities from "./screen/activities/Activities";
 function App() {
   return (
@@ -30,6 +35,11 @@ function App() {
         <Route path="/bars/:id" element={<BarDetail />} />
         <Route path="/bars/add-bar" element={<BarCreate />} />
         <Route path="/bars/:id/edit" element={<BarEdit />} />
+        <Route path="/activities" element={<Activities />} />
+        <Route path="/activities/add-activites" element={<ActivityCreate />} />
+        <Route path="/activities/:id" element={<ActivityDetail />} />
+        <Route path="/activities/:id/edit" element={<ActivityEdit />} />
+
         {/* <Route path="/activities" element={<Activities />} /> */}
 
         <Route path="/about" element={<About />} />

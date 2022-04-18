@@ -13,6 +13,9 @@
 .restaurantSubmitContainer {
   /* height: 100vh; */
   text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-60%);
 }
 .restaurantSubmission {
   position: relative;
@@ -22,6 +25,7 @@
   border-style: solid;
   padding: 2rem;
   left: 50%;
+  margin-top: 2em;
   transform: translateX(-50%);
 }
 
@@ -62,13 +66,42 @@
 }
 .infoContainer {
   width: 50em;
-  margin-left: 1em;
-  padding: 1em;
+  /* margin-left: 1em;
+  padding: 1em; */
+  height: fit-content;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2em;
 }
 .editButton {
   text-decoration: none;
   font-size: 1.5em;
+  border-style: solid;
+  border-color: black;
+  border-radius: 3px;
+  padding: 8px;
 }
 .title {
   text-align: center;
+  margin: 1em;
+}
+.restaurants {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.restaurantEditContainer {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-70%);
+}
+.restaurantEdit {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 30em;
+  left: 50%;
+  transform: translateX(-50%);
 }

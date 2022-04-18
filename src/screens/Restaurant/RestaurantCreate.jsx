@@ -28,9 +28,9 @@ export default function RestaurantCreate() {
     navigate("/restaurants", { replace: true });
   };
   return (
-    <div className="restaurantSubmitContainer">
+    <div className="restaurantSubmitContainer ">
       <h1>Submit Your Favorite Location</h1>
-      <form onSubmit={handleSubmit} className="restaurantSubmission">
+      <form onSubmit={handleSubmit} className="restaurantSubmission  ">
         <label>Restaurant</label>
         <input
           placeholder="restaurant name"

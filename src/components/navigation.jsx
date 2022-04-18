@@ -21,7 +21,7 @@ function Navigation() {
                 Find a restaurant
               </NavDropdown.Item>
               <NavDropdown.Item href="/bars">Find a bar</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
+              <NavDropdown.Item href="/activities">
                 Find an activity
               </NavDropdown.Item>
               <NavDropdown.Divider />

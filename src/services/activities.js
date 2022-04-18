@@ -9,7 +9,7 @@ export const getActivities = async () => {
   }
 };
 
-export const getActivity = async (id) => {
+export const getActivity = async id => {
   try {
     const response = await api.get(`/activities/${id}`);
     return response.data;
@@ -18,7 +18,7 @@ export const getActivity = async (id) => {
   }
 };
 
-export const createActivity = async (activity) => {
+export const createActivity = async activity => {
   try {
     const response = await api.post("/activities", activity);
     return response.data;
@@ -36,7 +36,7 @@ export const updateActivity = async (id, activity) => {
   }
 };
 
-export const deleteActivity = async (id) => {
+export const deleteActivity = async id => {
   try {
     const response = await api.delete(`/activities/${id}`);
     return response.data;

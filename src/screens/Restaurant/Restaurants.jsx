@@ -13,8 +13,8 @@ function Restaurants() {
   }, []);
 
   return (
-    <div>
-      <h1 className="title">restaurant</h1>
+    <div className="restaurants">
+      <h1 className="title">Top Choices for Restaurant in NYC</h1>
       {restaurants.map(restaurant => (
         <div>
           <span>
