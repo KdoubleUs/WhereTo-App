@@ -1,25 +1,27 @@
-import './App.css';
-import styled from 'styled-components';
-import Navigation from './components/navigation';
-import Title from './components/Title';
-import { Link, Routes, Route } from 'react-router-dom';
-import Submit from './components/Submit';
-import Contact from './components/Contact';
-import RestaurantCreate from './screens/Restaurant/RestaurantCreate';
-import BarCreate from './screens/Bars/BarCreate';
-import Bars from './screens/Bars/Bars';
-import BarDetail from './screens/Bars/BarDetail';
-import BarEdit from './screens/Bars/BarEdit';
-import Restaurants from './screens/Restaurant/Restaurants';
-import RestaurantDetail from './screens/Restaurant/RestaurantDetail';
-import RestaurantEdit from './screens/Restaurant/RestaurantEdit';
-import About from './components/About';
-import Activities from './screens/Activities/Activities';
-import ActivityCreate from './screens/Activities/ActivityCreate';
-import ActivityDetail from './screens/Activities/ActivityDetail';
-import ActivityEdit from './screens/Activities/ActivityEdit';
-import Authenticate from './screens/Auth/authenticate';
+
+import "./App.css";
+import styled from "styled-components";
+import Navigation from "./components/navigation";
+import Title from "./components/Title";
+import { Link, Routes, Route } from "react-router-dom";
+import Submit from "./components/Submit";
+import Contact from "./components/Contact";
+import RestaurantCreate from "./screens/Restaurant/RestaurantCreate";
+import BarCreate from "./screens/Bars/BarCreate";
+import Bars from "./screens/Bars/Bars";
+import BarDetail from "./screens/Bars/BarDetail";
+import BarEdit from "./screens/Bars/BarEdit";
+import Restaurants from "./screens/Restaurant/Restaurants";
+import RestaurantDetail from "./screens/Restaurant/RestaurantDetail";
+import RestaurantEdit from "./screens/Restaurant/RestaurantEdit";
+import About from "./components/About";
+import Activities from "./screens/Activities/Activities";
+import ActivityCreate from "./screens/Activities/ActivityCreate";
+import ActivityDetail from "./screens/Activities/ActivityDetail";
+import ActivityEdit from "./screens/Activities/ActivityEdit";
+import Authenticate from "./screens/Auth/authenticate";
 // import Activities from "./screen/activities/Activities";
+
 function App() {
   return (
     <div className="app">
