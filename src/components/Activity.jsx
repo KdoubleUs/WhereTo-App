@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import "../csscomponents/activityStyle.css";
+
 export default function activity({ activity }) {
   return (
-    <div>
-      <Link to={`/activities/${activity._id}`}>
-        <h2>{activity.name}</h2>
+    <div className="nameLink">
+      <Link id="linkId" to={`/activities/${activity._id}`}>
+        <button className="linkbtn">{activity.name}</button>
       </Link>
     </div>
   );
