@@ -1,14 +1,13 @@
-import { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { updateRestaurant, getRestaurant } from '../../services/restaurants';
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { updateRestaurant, getRestaurant } from "../../services/restaurants";
 function RestaurantEdit() {
   const [restaurant, setRestaurants] = useState({
-    image: '',
-    name: '',
-    category: '',
-    address: '',
-    description: '',
-    phone: '',
+    name: "",
+    category: "",
+    address: "",
+    description: "",
+    phone: "",
   });
   const { id } = useParams();
 
@@ -20,14 +19,14 @@ function RestaurantEdit() {
     fetchRestaurant();
   }, [id]);
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     const { name, value } = event.target;
     setRestaurants({
       ...restaurant,
       [name]: value,
     });
   };
-  const handleSubmit = async (event) => {
+  const handleSubmit = async event => {
     event.preventDefault();
     await updateRestaurant(id, restaurant);
   };
