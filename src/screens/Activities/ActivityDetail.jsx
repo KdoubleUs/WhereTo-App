@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { deleteActivity, getActivity } from "../../services/activities";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import "../../csscomponents/activityStyle.css";
 
 export default function ActivityDetail() {
   const [activity, setActivity] = useState({});
@@ -9,26 +10,25 @@ export default function ActivityDetail() {
 
   useEffect(() => {
     const fetchActivity = async () => {
-      let oneactivity = await getActivity(id);
-      setActivity(oneactivity);
+      let oneActivity = await getActivity(id);
+      setActivity(oneActivity);
     };
 
     fetchActivity();
   }, [id]);
 
   return (
-    <div>
-      <h2>{activity.image}</h2>
-      <p>{activity.name}</p>
-      <p>{activity.category}</p>
-      <p>{activity.description}</p>
-      <p>{activity.address}</p>
-      <p>{activity.phone}</p>
-      <div>
-        <button>
-          <Link to={`/activities/${activity._id}/edit`}>Edit activity</Link>
+    <div className="text">
+      <img className ="image"src={activity.image} alt="image"/>
+      <p>{`Name: ${activity.name}`}</p>
+      <p>{`Description: ${activity.description}`}</p>
+      <p>{`Address: ${activity.address}`}</p>
+      <p>{`Phone: ${activity.phone}`}</p>
+      <div className="button">
+        <button className="edit">
+          <Link className="eidtbtn" to={`/activities/${activity._id}/edit`}>Edit activity</Link>
         </button>
-        <button
+        <button className="deletebtn"
           onClick={() => {
             deleteActivity(activity._id);
             navigate("/activities", { replace: true });

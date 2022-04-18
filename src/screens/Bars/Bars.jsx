@@ -8,6 +8,7 @@ export default function Bars() {
   useEffect(() => {
     const fetchBars = async () => {
       const allBars = await getBars();
+      console.log("all bars:", allBars)
       setBars(allBars);
     };
     fetchBars();
