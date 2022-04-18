@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { deleteBar, getBar } from '../services/bars';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { deleteBar, getBar } from "../../services/bars";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 export default function BarDetail() {
   const [bar, setBar] = useState({});
@@ -29,7 +29,7 @@ export default function BarDetail() {
         <button
           onClick={() => {
             deleteBar(bar._id);
-            navigate('/bars', { replace: true });
+            navigate("/bars", { replace: true });
           }}
         >
           Delete Bar

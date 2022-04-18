@@ -11,7 +11,7 @@
 }
 
 .restaurantSubmitContainer {
-  height: 100vh;
+  /* height: 100vh; */
   text-align: center;
 }
 .restaurantSubmission {
@@ -29,9 +29,46 @@
   margin: 10px;
   padding: 5px;
 }
-.restaurantContainer {
+/* .restaurantContainer {
   height: 100vh;
-}
+} */
 .app {
   height: 100vh;
+  overflow-y: scroll;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  height: 30rem;
+}
+.contactPage {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.commentBox {
+  height: 10em;
+}
+.p-text {
+  width: 30em;
+  text-align: center;
+  text-align: left;
+}
+.infoContainer {
+  width: 50em;
+  margin-left: 1em;
+  padding: 1em;
+}
+.editButton {
+  text-decoration: none;
+  font-size: 1.5em;
+}
+.title {
+  text-align: center;
 }

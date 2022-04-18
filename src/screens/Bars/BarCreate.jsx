@@ -1,29 +1,20 @@
-import { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { updateBar, getBar } from '../services/bars';
-export default function BarEdit() {
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { createBar } from "../../services/bars";
+
+export default function BarCreate() {
   const [bar, setBar] = useState({
-    image: '',
-    name: '',
-    category: '',
-    description: '',
-    address: '',
-    phone: '',
+    image: "",
+    name: "",
+    category: "",
+    description: "",
+    address: "",
+    phone: "",
   });
 
   let navigate = useNavigate();
-  const { id } = useParams();
 
-  useEffect(() => {
-    const fetchBar = async () => {
-      let singleBar = await getBar(id);
-      setBar(singleBar);
-    };
-
-    fetchBar();
-  }, [id]);
-
-  const handleChange = (event) => {
+  const handleChange = event => {
     const { name, value } = event.target;
     setBar({
       ...bar,
@@ -31,10 +22,10 @@ export default function BarEdit() {
     });
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async event => {
     event.preventDefault();
-    await updateBar(id, bar);
-    navigate('/bars', { replace: true });
+    await createBar(bar);
+    navigate("/bars", { replace: true });
   };
 
   return (

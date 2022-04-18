@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { deleteRestaurant, getRestaurant } from "../services/restaurants";
+import { deleteRestaurant, getRestaurant } from "../../services/restaurants";
 import { Link, useParams, useNavigate } from "react-router-dom";
 
 function RestaurantDetail() {
