@@ -1,10 +1,10 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import { Navbar } from 'react-bootstrap';
-import { NavDropdown } from 'react-bootstrap';
-import { Nav } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import style from '../csscomponents/navigation.css';
+import React from "react";
+import Container from "react-bootstrap/Container";
+import { Navbar } from "react-bootstrap";
+import { NavDropdown } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import style from "../csscomponents/navigation.css";
 function Navigation() {
   return (
     <Navbar bg="dark" expand="lg" className="navigation">
@@ -20,8 +20,8 @@ function Navigation() {
               <NavDropdown.Item href="/restaurants">
                 Find a restaurant
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Find a bar</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
+              <NavDropdown.Item href="/bars">Find a bar</NavDropdown.Item>
+              <NavDropdown.Item href="/activities">
                 Find an activity
               </NavDropdown.Item>
               <NavDropdown.Divider />
@@ -30,8 +30,9 @@ function Navigation() {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/submit">Contact</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

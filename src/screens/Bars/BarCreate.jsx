@@ -1,20 +1,20 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { createBar } from '../services/bars';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { createBar } from "../../services/bars";
 
 export default function BarCreate() {
   const [bar, setBar] = useState({
-    image: '',
-    name: '',
-    category: '',
-    description: '',
-    address: '',
-    phone: '',
+    image: "",
+    name: "",
+    category: "",
+    description: "",
+    address: "",
+    phone: "",
   });
 
   let navigate = useNavigate();
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     const { name, value } = event.target;
     setBar({
       ...bar,
@@ -22,10 +22,10 @@ export default function BarCreate() {
     });
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async event => {
     event.preventDefault();
     await createBar(bar);
-    navigate('/bars', { replace: true });
+    navigate("/bars", { replace: true });
   };
 
   return (

@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { updateRestaurant, getRestaurant } from '../services/restaurants';
-// import { getRestaurant } from "../services/restaurants";
-
+import { updateRestaurant, getRestaurant } from '../../services/restaurants';
 function RestaurantEdit() {
   const [restaurant, setRestaurants] = useState({
     image: '',
@@ -12,13 +10,12 @@ function RestaurantEdit() {
     description: '',
     phone: '',
   });
-  let navigate = useNavigate();
   const { id } = useParams();
 
   useEffect(() => {
     const fetchRestaurant = async () => {
-      const singleRestaurant = await getRestaurant(id);
-      setRestaurants(singleRestaurant);
+      let getSingleRestaurant = await getRestaurant(id);
+      setRestaurants(getSingleRestaurant);
     };
     fetchRestaurant();
   }, [id]);
@@ -33,7 +30,6 @@ function RestaurantEdit() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     await updateRestaurant(id, restaurant);
-    navigate('/restaurants', { replace: true });
   };
 
   return (

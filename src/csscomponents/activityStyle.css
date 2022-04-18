@@ -1,0 +1,52 @@
+.text {
+  text-align: center;
+  font-size: x-large;
+  border: 10px;
+  padding: 100px;
+}
+
+.image {
+  width: 400px;
+  height: 300px;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deletebtn {
+  text-decoration: none;
+  background-color: black;
+  color: white;
+}
+
+.eidtbtn {
+  text-decoration: none;
+  color: black;
+  background-color: black;
+  color: white;
+}
+.nameLink {
+  display: flex;
+
+  text-decoration: none;
+  justify-content: center;
+  font-size: larger;
+  padding: 5px;
+}
+.linkbtn {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: black;
+  text-decoration: none;
+  color: white;
+}
+#linkId {
+  text-decoration: none;
+}
+#title {
+  text-align: center;
+  padding:10px;
+}

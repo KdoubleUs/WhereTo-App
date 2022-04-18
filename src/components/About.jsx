@@ -2,9 +2,9 @@ import React from "react";
 
 function About() {
   return (
-    <div>
+    <div className="contactPage">
       <h1>About Us</h1>
-      <p>
+      <p className="p-text">
         Growing up in NYC the diversity and variety of places to be can
         overwhelm many people when deciding where to go in the city that does
         not sleep. To a foreignor it can be overwhelming. This web application

@@ -1,70 +1,78 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { createActivity } from '../services/activities';
-
-export default function activityCreate() {
-  const [activity, setActivity] = useState({
-    image: '',
-    name: '',
-    category: '',
-    description: '',
-    address: '',
-    phone: '',
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { updateBar, getBar } from "../../services/bars";
+export default function BarEdit() {
+  const [bar, setBar] = useState({
+    image: "",
+    name: "",
+    category: "",
+    description: "",
+    address: "",
+    phone: "",
   });
 
   let navigate = useNavigate();
+  const { id } = useParams();
 
-  const handleChange = (event) => {
+  useEffect(() => {
+    const fetchBar = async () => {
+      let singleBar = await getBar(id);
+      setBar(singleBar);
+    };
+
+    fetchBar();
+  }, [id]);
+
+  const handleChange = event => {
     const { name, value } = event.target;
-    setActivity({
-      ...activity,
+    setBar({
+      ...bar,
       [name]: value,
     });
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async event => {
     event.preventDefault();
-    await createActivity(activity);
-    navigate('/activities', { replace: true });
+    await updateBar(id, bar);
+    navigate("/bars", { replace: true });
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <input
-      
         placeholder="image"
         name=""
-        value={activity.image}
+        value={bar.image}
         onChange={handleChange}
       />
       <input
         placeholder="What's it called?"
         name="name"
-        value={activity.name}
+        value={bar.name}
         onChange={handleChange}
       />
       <input
         placeholder="Make a category"
         name="category"
-        value={activity.category}
+        value={bar.category}
         onChange={handleChange}
       />
       <input
         placeholder="Tell me more"
         name="description"
-        value={activity.description}
+        value={bar.description}
         onChange={handleChange}
       />
       <input
         placeholder="Where is it?"
         name="address"
-        value={activity.address}
+        value={bar.address}
         onChange={handleChange}
       />
       <input
         placeholder="How do you reach them?"
         name="phone"
-        value={activity.phone}
+        value={bar.phone}
         onChange={handleChange}
       />
       <button type="submit">Submit</button>

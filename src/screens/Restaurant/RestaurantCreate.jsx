@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { createRestaurant } from "../services/restaurants";
+import { createRestaurant } from "../../services/restaurants";
 
 export default function RestaurantCreate() {
   const [restaurant, setRestaurant] = useState({
@@ -28,9 +28,9 @@ export default function RestaurantCreate() {
     navigate("/restaurants", { replace: true });
   };
   return (
-    <div className="restaurantSubmitContainer">
+    <div className="restaurantSubmitContainer ">
       <h1>Submit Your Favorite Location</h1>
-      <form onSubmit={handleSubmit} className="restaurantSubmission">
+      <form onSubmit={handleSubmit} className="restaurantSubmission  ">
         <label>Restaurant</label>
         <input
           placeholder="restaurant name"

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { deleteRestaurant, getRestaurant } from '../services/restaurants';
+import { deleteRestaurant, getRestaurant } from '../../services/restaurants';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 
 function RestaurantDetail() {
@@ -22,11 +22,11 @@ function RestaurantDetail() {
       <p>{restaurant.address}</p>
       <p>{restaurant.phone}</p>
       <button>
-        <Link to={`/restaurants/${restaurant.id}/edit`}>Edit</Link>
+        <Link to={`/restaurants/${restaurant._id}/edit`}>Edit</Link>
       </button>
       <button
         onClick={() => {
-          deleteRestaurant(restaurant.id);
+          deleteRestaurant(restaurant._id);
         }}
       >
         delete restaurant
