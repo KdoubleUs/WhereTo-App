@@ -1,3 +1,4 @@
+
 import "./App.css";
 import styled from "styled-components";
 import Navigation from "./components/navigation";
@@ -20,6 +21,7 @@ import ActivityDetail from "./screens/Activities/ActivityDetail";
 import ActivityEdit from "./screens/Activities/ActivityEdit";
 import Authenticate from "./screens/Auth/authenticate";
 // import Activities from "./screen/activities/Activities";
+
 function App() {
   return (
     <div className="app">
@@ -29,6 +31,7 @@ function App() {
         <Route path="/restaurants" element={<Restaurants />} />
         <Route path="/submit" element={<Contact />} />
         <Route path="/restaurants/:id" element={<RestaurantDetail />} />
+        <Route path="/restaurants/:id/edit" element={<RestaurantEdit />} />
         <Route path="/spots/create" element={<RestaurantCreate />} />
         <Route path="/restaurants/:id/edit" element={<RestaurantEdit />} />
         <Route path="/bars" element={<Bars />} />
