@@ -18,7 +18,7 @@ import Activities from "./screens/Activities/Activities";
 import ActivityCreate from "./screens/Activities/ActivityCreate";
 import ActivityDetail from "./screens/Activities/ActivityDetail";
 import ActivityEdit from "./screens/Activities/ActivityEdit";
-
+import Authenticate from "./screens/Auth/authenticate";
 // import Activities from "./screen/activities/Activities";
 function App() {
   return (
@@ -39,7 +39,7 @@ function App() {
         <Route path="/activities/add-activites" element={<ActivityCreate />} />
         <Route path="/activities/:id" element={<ActivityDetail />} />
         <Route path="/activities/:id/edit" element={<ActivityEdit />} />
-
+        <Route path="/login" element={<Authenticate />} />
         {/* <Route path="/activities" element={<Activities />} /> */}
 
         <Route path="/about" element={<About />} />
