@@ -68,8 +68,8 @@ function Title() {
             animate="visible"
             transition={{ duration: 1.2 }}
           >
-            <h1>Restaurant Blog</h1>
-            <p>Here are some of New York's top rated restaurants</p>
+            <h1>Destination Hotspot</h1>
+            <p>Here are some of New York's top rated destinations</p>
           </motion.h1>
         </ColumnLeft>
         <ColumnRight>

@@ -1,19 +1,22 @@
-import React from "react";
+import React from 'react';
 
 function About() {
   return (
     <div className="contactPage">
       <h1>About Us</h1>
       <p className="p-text">
-        Growing up in NYC the diversity and variety of places to be can
+        Growing up in NYC, the diversity and sheer variety of places can
         overwhelm many people when deciding where to go in the city that does
-        not sleep. To a foreignor it can be overwhelming. This web application
-        was design to provide the people a list of the top places to be at in
-        New York City. These desingation were personally chosen and have been
-        experienced first-hand. We also want to allow others to share their
-        favorite spots to the public. We hope your decision to your next
-        locations in New York will be less stressful. Let there be less wasted
-        time in decided and more time to enjoy the places.
+        not sleep. To a local resident it can be time-consuming and to a
+        foreigner, overwhelming. Our application "whereTo" was designed to
+        provide busy locals and foreigners alike: a carefully curated list of
+        the top spots to visit in New York City. These designations were
+        individually chosen and have been experienced first-hand. We'd also love
+        for you to share your favorite spots with us as well, so we've
+        incorporated a feature for you to submit them. We hope the journey to
+        your next destination in New York will be less stressful. Let there be
+        less time spent deciding and more time spent enjoying the best that New
+        York City has to offer. whereTo?
       </p>
     </div>
   );
