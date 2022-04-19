@@ -14,8 +14,6 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
-
-
 }
 
 .deletebtn {
@@ -25,6 +23,7 @@
   display: block;
   background-color: black;
   padding: 5px;
+  font-size: small;
 }
 
 .eidtbtn {
@@ -34,6 +33,7 @@
   display: block;
   background-color: black;
   padding: 5px;
+  font-size: small;
 }
 
 #backbtn {
@@ -43,6 +43,7 @@
   display: block;
   background-color: black;
   padding: 5px;
+  font-size: small;
 }
 
 .nameLink {

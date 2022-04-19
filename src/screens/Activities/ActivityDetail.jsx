@@ -30,6 +30,9 @@ export default function ActivityDetail() {
             Edit activity
           </Link>
         </button>
+        <Link id="linkId" to={"/activities/"}>
+          <button id="backbtn">Back</button>
+        </Link>
         <button
           className="deletebtn"
           onClick={() => {
@@ -39,9 +42,6 @@ export default function ActivityDetail() {
         >
           Delete activity
         </button>
-        <Link id="linkId" to={"/activities/"}>
-          <button id="backbtn">Back</button>
-        </Link>
       </div>
     </div>
   );
