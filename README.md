@@ -41,3 +41,17 @@ http://localhost:3000
 ## Find A Destination
 
 <img src="./Quick-Walkthrough.gif" alt="appWalkThrough">
+
+## Contributors
+
+[![](https://github.com/KdoubleUs.png?size=100)](https://github.com/Kdoubleus)
+[![](https://github.com/LauraTelqiu.png?size=100)](https://github.com/LauraTelqiu)
+[![](https://github.com/AinsleyB29.png?size=100)](https://github.com/AinsleyB29)
+
+## Contact
+
+If you'd like to learn more or collaborate, feel free to connect with us on LinkedIn.
+
+[Kevin](https://www.linkedin.com/in/kevinwunyc/) ✯
+[Ainsley](https://www.linkedin.com/in/ainsleybrundage/) ✯
+[Laura](https://www.linkedin.com/in/lauratelqiu/)
