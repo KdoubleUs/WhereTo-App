@@ -1,0 +1,28 @@
+.bar-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  flex: 1 0 35%;
+  overflow: hidden;
+  max-width: 461px;
+  font-family: 'Josefin Sans', sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  margin-bottom: 4vh;
+}
+
+.bar-card-image-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 315px;
+}
+
+.bar-card-image {
+  max-height: 315px;
+  clip-path: polygon(0 0, 100% 0, 100% 54%, 0 54%);
+}
+
+.bar-card a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
