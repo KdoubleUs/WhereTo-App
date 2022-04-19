@@ -42,6 +42,17 @@ http://localhost:3000
 
 <img src="./Quick-Walkthrough.gif" alt="appWalkThrough">
 
+## Technologies Used
+
+<img align="left" img src="https://img.icons8.com/color/45/000000/mongodb.png"/>
+<img align="left" img src="https://img.icons8.com/dusk/45/000000/react.png"/>
+<img align="left" img src="https://img.icons8.com/color/45/000000/nodejs.png"/>
+<img align="left" img src="https://img.icons8.com/dusk/45/000000/javascript-logo.png"/>
+<img align="left" img src="https://img.icons8.com/dusk/45/000000/css3.png"/>
+<img align="left" img src="https://img.icons8.com/dusk/45/000000/html-5.png"/>
+<img src="https://img.icons8.com/color/48/000000/figma--v1.png"/>
+<br><br>
+
 ## Additional Features
 
 FirebaseUI Authentication, which allows users to securely sign-in to their Google account in order to apply changes to the application.
