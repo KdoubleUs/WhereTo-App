@@ -19,6 +19,8 @@ import ActivityCreate from './screens/Activities/ActivityCreate';
 import ActivityDetail from './screens/Activities/ActivityDetail';
 import ActivityEdit from './screens/Activities/ActivityEdit';
 import Authenticate from './screens/Auth/authenticate';
+import Confirm from "./components/Confirm";
+
 // import Activities from "./screen/activities/Activities";
 
 function App() {
@@ -42,6 +44,8 @@ function App() {
         <Route path="/activities/:id" element={<ActivityDetail />} />
         <Route path="/activities/:id/edit" element={<ActivityEdit />} />
         <Route path="/login" element={<Authenticate />} />
+        {/* <Route path="/activities" element={<Activities />} /> */}
+        <Route path="/confirmation" element={<Confirm />} />
 
         <Route path="/about" element={<About />} />
       </Routes>

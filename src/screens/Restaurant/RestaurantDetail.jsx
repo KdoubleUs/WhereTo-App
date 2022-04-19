@@ -9,27 +9,30 @@ function RestaurantDetail() {
 
   useEffect(() => {
     const fetchRestaurant = async () => {
-      const getRestaurant = await getRestaurant(id);
-      setRestaurant(getRestaurant);
+      const getSingleRestaurant = await getRestaurant(id);
+      setRestaurant(getSingleRestaurant);
     };
     fetchRestaurant();
   }, [id]);
   return (
-    <div>
+    <div className="detailContainer">
       <h1>{restaurant.name}</h1>
       <p>{restaurant.category}</p>
       <p>{restaurant.description}</p>
       <p>{restaurant.address}</p>
       <p>{restaurant.phone}</p>
-      <button>
-        <Link to={`/restaurants/${restaurant._id}/edit`}>Edit</Link>
+      <button className="detailBtn" id="editDetail">
+        <Link to={`/restaurants/${restaurant._id}/edit`} className="detailBtn">
+          Edit
+        </Link>
       </button>
       <button
+        className="detailBtn"
         onClick={() => {
           deleteRestaurant(restaurant._id);
         }}
       >
-        delete restaurant
+        Delete restaurant
       </button>
     </div>
   );
