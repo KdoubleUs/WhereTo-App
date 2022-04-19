@@ -1,29 +1,33 @@
-import React from "react";
-import Container from "react-bootstrap/Container";
-import { Navbar } from "react-bootstrap";
-import { NavDropdown } from "react-bootstrap";
-import { Nav } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import style from "../csscomponents/navigation.css";
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import { Navbar } from 'react-bootstrap';
+import { NavDropdown } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import style from '../csscomponents/navigation.css';
 function Navigation() {
   return (
     <Navbar bg="dark" expand="lg" className="navigation">
       <Container>
-        <Navbar.Brand href="/" text="white" className="logo">
-          WHERETO
+
+        <Navbar.Brand href="/" text="white">
+          whereTo?
+
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
+
             <Nav.Link href="/" className="navA">
               Home
             </Nav.Link>
             <NavDropdown
-              title="Restaurant"
+              title="Destination"
               id="basic-nav-dropdown"
               className="navA"
             >
               <NavDropdown.Item href="/restaurants" className="navA">
+
                 Find a restaurant
               </NavDropdown.Item>
               <NavDropdown.Item href="/bars" className="navA">

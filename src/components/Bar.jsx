@@ -1,10 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import '../csscomponents/bar.css';
 export default function Bar({ bar }) {
+  const imageStyle = {
+    backgroundImage: `url(${bar.cardImage ? bar.cardImage : bar.image})`,
+  };
   return (
-    <div>
+    <div className="bar-card">
+      <div className="bar-card-image-container" style={imageStyle}></div>
       <Link to={`/bars/${bar._id}`}>
-        <h2>{bar.name}</h2>
+        <h2 className="bar-name">{bar.name}</h2>
       </Link>
+      <p>{bar.address}</p>
+      <p>{bar.phone}</p>
     </div>
   );
 }

@@ -19,16 +19,22 @@ export default function ActivityDetail() {
 
   return (
     <div className="text">
-      <img className ="image"src={activity.image} alt="image"/>
+      <img className="image" src={activity.image} alt="image" />
       <p>{`Name: ${activity.name}`}</p>
       <p>{`Description: ${activity.description}`}</p>
       <p>{`Address: ${activity.address}`}</p>
       <p>{`Phone: ${activity.phone}`}</p>
       <div className="button">
         <button className="edit">
-          <Link className="eidtbtn" to={`/activities/${activity._id}/edit`}>Edit activity</Link>
+          <Link className="eidtbtn" to={`/activities/${activity._id}/edit`}>
+            Edit activity
+          </Link>
         </button>
-        <button className="deletebtn"
+        <Link id="linkId" to={"/activities/"}>
+          <button id="backbtn">Back</button>
+        </Link>
+        <button
+          className="deletebtn"
           onClick={() => {
             deleteActivity(activity._id);
             navigate("/activities", { replace: true });

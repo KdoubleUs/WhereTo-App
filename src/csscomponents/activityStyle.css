@@ -7,34 +7,53 @@
 
 .image {
   width: 400px;
-  height: 300px;
+  height: 250px;
 }
 
 .button {
   display: flex;
   justify-content: space-between;
+  padding: 10px;
 }
 
 .deletebtn {
-  text-decoration: none;
-  background-color: black;
+  border: 1px solid black;
   color: white;
+  text-decoration: none;
+  display: block;
+  background-color: black;
+  padding: 5px;
+  font-size: small;
 }
 
 .eidtbtn {
-  text-decoration: none;
-  color: black;
-  background-color: black;
+  border: 1px solid black;
   color: white;
+  text-decoration: none;
+  display: block;
+  background-color: black;
+  padding: 5px;
+  font-size: small;
 }
+
+#backbtn {
+  border: 1px solid black;
+  color: white;
+  text-decoration: none;
+  display: block;
+  background-color: black;
+  padding: 5px;
+  font-size: small;
+}
+
 .nameLink {
   display: flex;
-
   text-decoration: none;
   justify-content: center;
   font-size: larger;
   padding: 5px;
 }
+
 .linkbtn {
   display: flex;
   justify-content: center;
@@ -43,10 +62,14 @@
   text-decoration: none;
   color: white;
 }
+
 #linkId {
   text-decoration: none;
 }
-#title {
+
+#click {
   text-align: center;
-  padding:10px;
+  padding: 10px;
 }
+
+#backbtn {}
