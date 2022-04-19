@@ -42,6 +42,10 @@ http://localhost:3000
 
 <img src="./Quick-Walkthrough.gif" alt="appWalkThrough">
 
+## Additional Features
+
+FirebaseUI Authentication, which allows users to securely sign-in to their Google account in order to apply changes to the application.
+
 ## Contributors
 
 [![](https://github.com/KdoubleUs.png?size=100)](https://github.com/Kdoubleus)
