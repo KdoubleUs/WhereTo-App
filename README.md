@@ -1,6 +1,6 @@
 ## whereTo?
 
-A full-stack MERN application which gives users the ability to view, update, edit, delete, and contribute to a comprehensive list that includes some of the most coveted restaurants, bars, and recreational venues in the city.
+A full-stack MERN application which gives users the ability to view, update, edit, delete, and contribute to a comprehensive list of the most coveted restaurants, bars, and recreational venues in the city.
 
 ## Description
 
