@@ -6,7 +6,7 @@ A full-stack MERN application which gives users the ability to view, update, edi
 
 The whereTo? app utilizes React, React-Router to handle multiple views, and communicates with a back-end API that follows a restful pattern to perform CRUD operations on data that is retrieved using axios.
 
-# Instructions
+## Instructions
 
 1. Clone down this repo.
 2. Install dependencies.
