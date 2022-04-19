@@ -15,8 +15,8 @@ export default function Activities() {
   }, []);
 
   return (
-    <div id="title">
-      <h1>Click for more info</h1>
+    <div>
+      <h1 id="click">Click for more info</h1>
       {singleActivity.map((activityData) => (
         <Activity key={activityData._id} activity={activityData} />
       ))}

@@ -13,6 +13,9 @@
 .button {
   display: flex;
   justify-content: space-between;
+  padding: 10px;
+
+
 }
 
 .deletebtn {
@@ -25,6 +28,15 @@
 }
 
 .eidtbtn {
+  border: 1px solid black;
+  color: white;
+  text-decoration: none;
+  display: block;
+  background-color: black;
+  padding: 5px;
+}
+
+#backbtn {
   border: 1px solid black;
   color: white;
   text-decoration: none;
@@ -54,7 +66,9 @@
   text-decoration: none;
 }
 
-#title {
+#click {
   text-align: center;
   padding: 10px;
 }
+
+#backbtn {}
