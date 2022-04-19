@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createRestaurant } from "../../services/restaurants";
-
+import Confirm from "../../components/Confirm";
 export default function RestaurantCreate() {
   const [restaurant, setRestaurant] = useState({
     image: "",
@@ -11,8 +11,11 @@ export default function RestaurantCreate() {
     address: "",
     phone: "",
   });
-
   let navigate = useNavigate();
+  const confirmation = e => {
+    e.preventDefault();
+    navigate("/confirmation", { replace: true });
+  };
 
   const handleChange = event => {
     const { name, value } = event.target;
@@ -70,7 +73,7 @@ export default function RestaurantCreate() {
           value={restaurant.phone}
           onChange={handleChange}
         ></input>
-        <button type="submit" className="submitButton">
+        <button type="submit" className="submitButton" onClick={confirmation}>
           Submit Form
         </button>
       </form>

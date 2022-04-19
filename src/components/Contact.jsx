@@ -1,6 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 function Contact() {
+  let navigate = useNavigate();
+  const confirmation = e => {
+    e.preventDefault();
+    navigate("/confirmation", { replace: true });
+  };
   return (
     <div className="contactPage">
       <span>
@@ -14,7 +19,7 @@ function Contact() {
 
         <label>Comments: </label>
         <textarea className="commentBox"></textarea>
-        <button type="submit" className="submitButton">
+        <button type="submit" className="submitButton" onClick={confirmation}>
           Submit
         </button>
       </form>
