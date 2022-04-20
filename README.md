@@ -55,7 +55,7 @@ http://localhost:3000
 
 ## Additional Features
 
-FirebaseUI Authentication, which allows users to securely sign-in to their Google account in order to apply changes to the application.
+FirebaseUI Authentication, which allows users to securely sign-in to their Google account in order to access their data.
 
 ## Contributors
 
