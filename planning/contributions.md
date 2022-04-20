@@ -4,7 +4,7 @@
 
 - Established and organized initial file structure using create-react-app.
 
-- Created user interface for landing page & styled navbar with React & Bootstrap.
+- Created user interface for landing page & styled navbar with React, Bootstrap, & Framer Motion.
 
 - Organized daily stand-up meetings.
 
@@ -15,6 +15,12 @@
 - Deployed back-end to Heroku and front-end to Netlify.
 
 - Kept track of the git workflow and reviewed/approved merge & pull requests.
+
+- Used styled components for screens.
+
+- Handled back-end for restaurants model.
+
+- Handled debugging for deployment & backend.
 
 ## <em>Ainsley</em>
 
@@ -31,6 +37,8 @@
 - Designed user interface for the Bar screen components using CSS Flexbox, React functional components, react hooks, & CSS styling.
 
 - Kept track of the git workflow and monitored/reviewed merge & pull requests.
+
+- Handled debugging for front-end.
 
 ## <em>Laura</em>
 
