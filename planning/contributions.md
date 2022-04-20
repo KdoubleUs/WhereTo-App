@@ -22,6 +22,8 @@
 
 - Handled debugging for deployment & backend.
 
+- Handled CRUD functionality.
+
 ## <em>Ainsley</em>
 
 - Planning: project ideation, task delegation, and feature suggestions/reviews.
@@ -32,7 +34,7 @@
 
 - Quality assurance (front-end/back-end).
 
-- Employed CRUD functionality for the Bar screen component.
+- Built CRUD functionality for Bars.
 
 - Designed user interface for the Bar screen components using CSS Flexbox, React functional components, react hooks, & CSS styling.
 
