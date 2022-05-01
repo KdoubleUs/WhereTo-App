@@ -67,6 +67,6 @@ FirebaseUI Authentication, which allows users to securely sign-in to their Googl
 
 If you'd like to learn more or collaborate, feel free to connect with us on LinkedIn.
 
-[Kevin](https://www.linkedin.com/in/kevinwunyc/) ✯
+[Kevin](https://www.linkedin.com/in/kevinwunyc/) ✯\*
 [Laura](https://www.linkedin.com/in/lauratelqiu/) ✯
 [Ainsley](https://www.linkedin.com/in/ainsleybrundage/)
