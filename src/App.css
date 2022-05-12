@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 
 * {
   padding: 0;
@@ -159,4 +159,15 @@
   margin: 1em;
   padding: 0.8em;
   text-decoration: none;
+}
+.preloader {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+#bar-preloader {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }

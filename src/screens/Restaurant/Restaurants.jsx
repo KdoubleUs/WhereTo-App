@@ -15,14 +15,14 @@ function Restaurants() {
     };
     setInterval(() => {
       fetchRestaurant();
-    }, 2000);
+    }, 1500);
   }, []);
-  let loadingGif = <img src={gif} alt="none" />;
+  let preLoader = <img src={gif} alt="none" className="preloader" />;
   return (
     <div className="restaurants">
       <h1 className="title">Top Choices for Restaurants in NYC</h1>
       {!loaded
-        ? loadingGif
+        ? preLoader
         : restaurants.map(restaurant => (
             <div key={restaurant.id}>
               <span>
