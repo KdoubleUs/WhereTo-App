@@ -10,11 +10,11 @@ function Restaurants() {
     const fetchRestaurant = async () => {
       const allRestaurant = await getRestaurants();
       setRestaurants(allRestaurant);
-      setLoaded("complete");
       // setLoaded("complete");z
     };
     setInterval(() => {
       fetchRestaurant();
+      setLoaded("complete");
     }, 1500);
   }, []);
   let preLoader = <img src={gif} alt="none" className="preloader" />;

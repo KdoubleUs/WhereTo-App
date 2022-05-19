@@ -161,13 +161,16 @@
   text-decoration: none;
 }
 .preloader {
-  position: relative;
-  top: 50%;
+  position: absolute;
   left: 50%;
-  transform: translate(-50%);
+  top: 50%;
+  transform: translate(-50%, -70%);
 }
 #bar-preloader {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+.restaurants {
+  height: 100%;
 }
