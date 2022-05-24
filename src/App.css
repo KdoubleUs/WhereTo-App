@@ -184,3 +184,11 @@
   margin-left: 1em;
   font-size: 1.5em;
 }
+.pagination-list:hover {
+  opacity: 0.5;
+}
+
+li.active a {
+  opacity: 0.5;
+  color: red;
+}

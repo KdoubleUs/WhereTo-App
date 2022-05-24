@@ -9,7 +9,7 @@ function Restaurants() {
   const [loaded, setLoaded] = useState(null);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(10);
+  const [postsPerPage] = useState(5);
 
   const indexOfLastPage = currentPage * postsPerPage;
   const indexOfFirstPage = indexOfLastPage - postsPerPage;
@@ -47,6 +47,7 @@ function Restaurants() {
           postsPerPage={postsPerPage}
           totalPosts={restaurants.length}
           paginate={paginate}
+          currentPage={currentPage}
         />
       </div>
     </div>
