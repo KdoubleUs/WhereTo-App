@@ -3,9 +3,18 @@ import { getRestaurant, getRestaurants } from "../../services/restaurants";
 import Restaurant from "../../components/Restaurant";
 import Container from "../../components/Container";
 import gif from "../../Dual Ball-1s-200px.gif";
+import Pagination from "../../components/Pagination.jsx";
 function Restaurants() {
   const [restaurants, setRestaurants] = useState([]);
   const [loaded, setLoaded] = useState(null);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(10);
+
+  const indexOfLastPage = currentPage * postsPerPage;
+  const indexOfFirstPage = indexOfLastPage - postsPerPage;
+  const currentPost = restaurants.slice(indexOfFirstPage, indexOfLastPage);
+
   useEffect(() => {
     const fetchRestaurant = async () => {
       const allRestaurant = await getRestaurants();
@@ -17,6 +26,9 @@ function Restaurants() {
       setLoaded("complete");
     }, 1500);
   }, []);
+
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+
   let preLoader = <img src={gif} alt="none" className="preloader" />;
   return (
     <div className="restaurants">
@@ -30,6 +42,13 @@ function Restaurants() {
               </span>
             </div>
           ))}
+      <div>
+        <Pagination
+          postsPerPage={postsPerPage}
+          totalPosts={restaurants.length}
+          paginate={paginate}
+        />
+      </div>
     </div>
   );
 }
