@@ -1,0 +1,178 @@
+.restaurantSubmitContainer {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-60%);
+}
+.restaurantSubmission {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 20em;
+  border-style: solid;
+  padding: 2rem;
+  left: 50%;
+  margin-top: 2em;
+  transform: translateX(-50%);
+}
+
+.submitButton {
+  margin: 10px;
+  padding: 5px;
+}
+
+.app {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  height: 30rem;
+}
+.contactPage {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.commentBox {
+  height: 10em;
+}
+.p-text {
+  width: 30em;
+  text-align: center;
+  text-align: left;
+}
+.infoContainer {
+  width: 50em;
+  height: fit-content;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2em;
+}
+.editButton {
+  text-decoration: none;
+  font-size: 1.5em;
+  border-style: solid;
+  border-color: black;
+  border-radius: 3px;
+  padding: 8px;
+}
+.title {
+  text-align: center;
+  margin: 1em;
+}
+.restaurants {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.restaurantEditContainer {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-70%);
+}
+.restaurantEdit {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 30em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.LoginContainer {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  border-style: solid;
+  width: 30rem;
+  height: 37rem;
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: 5px 8px 8px -1px rgb(117, 129, 133);
+}
+.loginBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10em;
+  position: relative;
+  top: 50%;
+  transform: translateY(-60%);
+}
+.loginImg {
+  width: 13em;
+  height: auto;
+  margin: 2em;
+  border-radius: 50%;
+  filter: drop-shadow(10px 10px 10px rgb(82, 82, 82));
+}
+
+.navA:hover {
+  color: lightcoral !important;
+}
+#basic-nav-dropdown:hover {
+  background-color: lightcoral !important;
+}
+.confirmText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.detailContainer {
+  position: relative;
+  top: 50%;
+  transform: translateY(-70%);
+  text-align: center;
+}
+.detailBtn {
+  margin: 1em;
+  padding: 0.8em;
+  text-decoration: none;
+}
+.preloader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -70%);
+}
+#bar-preloader {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pagination-set {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  left: 50%;
+  /* margin: 1em 1em 1em 0; */
+}
+.pagination-list {
+  font-size: 1.5em;
+  margin: 1em 1em 1em 0;
+}
+.pagination-list:hover {
+  opacity: 0.5;
+}
+
+li.active a {
+  opacity: 0.5;
+  color: red;
+}
+.restaurants {
+  height: 100%;
+  margin-bottom: 5em;
+}

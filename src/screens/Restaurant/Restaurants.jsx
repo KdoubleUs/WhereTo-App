@@ -1,9 +1,11 @@
+import "../../csscomponents/restaurant.css";
 import { useState, useEffect } from "react";
 import { getRestaurant, getRestaurants } from "../../services/restaurants";
 import Restaurant from "../../components/Restaurant";
 import Container from "../../components/Container";
 import gif from "../../Dual Ball-1s-200px.gif";
 import Pagination from "../../components/Pagination";
+
 function Restaurants() {
   const [restaurants, setRestaurants] = useState([]);
   const [loaded, setLoaded] = useState(null);
