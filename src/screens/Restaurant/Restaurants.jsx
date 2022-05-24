@@ -3,17 +3,17 @@ import { getRestaurant, getRestaurants } from "../../services/restaurants";
 import Restaurant from "../../components/Restaurant";
 import Container from "../../components/Container";
 import gif from "../../Dual Ball-1s-200px.gif";
-import Pagination from "../../components/Pagination.jsx";
+import Pagination from "../../components/Pagination";
 function Restaurants() {
   const [restaurants, setRestaurants] = useState([]);
   const [loaded, setLoaded] = useState(null);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(10);
+  const [postsPerPage] = useState(10);
 
   const indexOfLastPage = currentPage * postsPerPage;
   const indexOfFirstPage = indexOfLastPage - postsPerPage;
-  const currentPost = restaurants.slice(indexOfFirstPage, indexOfLastPage);
+  const currentPosts = restaurants.slice(indexOfFirstPage, indexOfLastPage);
 
   useEffect(() => {
     const fetchRestaurant = async () => {
@@ -35,7 +35,7 @@ function Restaurants() {
       <h1 className="title">Top Choices for Restaurants in NYC</h1>
       {!loaded
         ? preLoader
-        : restaurants.map(restaurant => (
+        : currentPosts.map(restaurant => (
             <div key={restaurant.id}>
               <span>
                 <Container restaurant={restaurant} />

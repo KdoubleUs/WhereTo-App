@@ -7,9 +7,9 @@ function Pagination({ postsPerPage, totalPosts, paginate }) {
   }
   return (
     <div>
-      <ul>
-        {setOfPages.map(item => {
-          <li key={item.id}>
+      <ul className="pagination-set">
+        {setOfPages.map(item => (
+          <li key={item.id} className="pagination-list">
             <a
               onClick={e => {
                 e.preventDefault();
@@ -20,8 +20,8 @@ function Pagination({ postsPerPage, totalPosts, paginate }) {
             >
               {item}
             </a>
-          </li>;
-        })}
+          </li>
+        ))}
       </ul>
     </div>
   );

@@ -171,6 +171,16 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.restaurants {
-  height: 100%;
+
+.pagination-set {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  left: 50%;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+.pagination-list {
+  margin-left: 1em;
+  font-size: 1.5em;
 }
