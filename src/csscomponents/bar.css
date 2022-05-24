@@ -5,7 +5,7 @@
   flex: 1 0 35%;
   overflow: hidden;
   max-width: 461px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
   margin-bottom: 4vh;
 }
@@ -25,4 +25,23 @@
   text-decoration: none;
   color: black;
   font-weight: bold;
+}
+.title {
+  text-align: center;
+  margin: 1em;
+}
+
+.bar-card-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 95%;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+.bar-card {
+  padding: 1em;
+}
+.card-text {
+  padding: 0.5em;
 }

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getBars } from "../../services/bars.js";
 import Bar from "../../components/Bar.jsx";
-import "../../csscomponents/bars.css";
+import "../../csscomponents/bar.css";
 import gif from "../../Dual Ball-1s-200px.gif";
 
 const barImages = [
@@ -38,7 +38,7 @@ export default function Bars() {
   const preLoader = <img src={gif} alt="preloading" id="bar-preloader" />;
   return (
     <div>
-      <h1>Bars</h1>
+      <h1 className="title">Bars</h1>
       <div className="bar-card-row">
         {!load
           ? preLoader
